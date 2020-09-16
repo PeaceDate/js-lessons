@@ -47,26 +47,13 @@ function rememberMyFiilms () {
               b = prompt('На сколько оцените его?', '');
         if (a != null && b != null && a != '' && b != '' && a.length < 50){
             personalMovieDB.movies[a] = b;
-            console.log('done');
         } else {
-            console.log('error');
             i--;
         }
-    
-        console.log(personalMovieDB);
     }
 }
 
 rememberMyFiilms ();
-
-// Функция показывания БД
-function showMyDB (hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
-}
-
-showMyDB (personalMovieDB.privat);
 
 // Запись жанров в БД
 function writeYourGenres () {
@@ -76,3 +63,11 @@ function writeYourGenres () {
 }
 
 writeYourGenres();
+
+// Функция показывания БД
+function showMyDB (hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+showMyDB (personalMovieDB.privat);
